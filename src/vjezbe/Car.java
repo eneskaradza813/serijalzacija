@@ -1,26 +1,32 @@
 package vjezbe;
 
-public class Car {
+import java.io.Serializable;
 
-     String make;
-    String model;
-    int numDoors;
+public class Car implements Serializable{
+
+   
+    public String model;
+    public int maximumSpeed;
     
-    static int wheels = 4;
-    Car(String make, String model){
-        this.make = make;
-        this.model = model;
+    public void setModel(String model){this.model = model;}
+    public String getModel(){return this.model;}
+    public void setmaximumSpeed(int maximumSpeed){this.maximumSpeed = maximumSpeed;}
+    public int maximumSpeed(){return maximumSpeed;}
+
+    @Override
+    public String toString() {
+        return "model: " + model + " max speed: " + maximumSpeed;
+                
     }
-    Car(String make, String model, int nDoors){
-        this.make =  make;
-        this.model = model;
-        nDoors = numDoors;
+    
+    
     }
     
-        void printDetails(){
-            System.out.println("Make = " + make);
-            System.out.println("Model = " + model);
-            System.out.println("Number of doors = " + numDoors);
-        }
     
-}
+   
+    
+    
+    
+  
+    
+
